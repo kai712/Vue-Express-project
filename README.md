@@ -38,6 +38,12 @@
  （1）"订货管理端"可以对供应商进行自定义分类，对于分类有修改、删除等功能
  （2）对于"供应商端"中的供应商入驻，这里我目前只提供一种方式，就是"订货管理端"中的采购商新增供应商的时候绑定对应关系，并为此供应商分配登录账号
 
+## 部分项目截图
+
+![image](https://github.com/SunShineKG/SRM/blob/master/gif/login.gif)
+![image](https://github.com/SunShineKG/SRM/blob/master/gif/materiel.gif)
+![image](https://github.com/SunShineKG/SRM/blob/master/gif/supplierClassfication.gif)
+![image](https://github.com/SunShineKG/SRM/blob/master/gif/supplierList.gif)
 
 ## 补充说明
 
