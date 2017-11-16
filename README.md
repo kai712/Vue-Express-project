@@ -41,8 +41,11 @@
 ## 部分项目截图
 
 ![image](https://github.com/SunShineKG/SRM/blob/master/gif/login.gif)
+
 ![image](https://github.com/SunShineKG/SRM/blob/master/gif/materiel.gif)
+
 ![image](https://github.com/SunShineKG/SRM/blob/master/gif/supplierClassfication.gif)
+
 ![image](https://github.com/SunShineKG/SRM/blob/master/gif/supplierList.gif)
 
 ## 补充说明
