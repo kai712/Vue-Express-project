@@ -48,6 +48,8 @@
 
 ![image](https://github.com/SunShineKG/SRM/blob/master/gif/supplierList.gif)
 
+![image](https://github.com/SunShineKG/SRM/blob/master/gif/purchaseOrder.gif)
+
 ## 补充说明
 
   这个系统只是我闲来无事做着玩的，对于业务和功能欠缺很多，老铁们随便看看就好，我起初是想做个SRM系统的，然后我整体做了个架构，发现功能块太多太多了，
