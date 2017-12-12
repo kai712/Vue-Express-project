@@ -156,7 +156,7 @@
         <el-table-column
           prop="state"
           label="状态">
-          <template scope="scope">
+          <template slot-scope="scope">
             <el-switch
               v-model="scope.row.state"
               on-text=""
@@ -168,7 +168,7 @@
         <el-table-column
           label="操作"
           width="140">
-          <template scope="scope">
+          <template slot-scope="scope">
             <el-button
               size="small"
               @click="handleEdit(scope.row)">修改</el-button>

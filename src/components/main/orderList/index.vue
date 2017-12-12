@@ -46,7 +46,7 @@
         <el-table-column
           label="产品名称"
           width="300">
-          <template scope="scope">
+          <template slot-scope="scope">
             <div class="name">
               <img :src="scope.row.imgUrls.length !==0?(imgPort+scope.row.imgUrls[0]):'/static/img/03.jpg'" alt="">
               <div class="title">
@@ -59,7 +59,7 @@
         <el-table-column
           label="下单时间"
           show-overflow-tooltip>
-          <template scope="scope">
+          <template slot-scope="scope">
             {{ scope.row.setOrderDate.substring(0,10) }}
           </template>
         </el-table-column>
@@ -71,21 +71,21 @@
         <el-table-column
           label="数量"
           show-overflow-tooltip>
-          <template scope="scope">
+          <template slot-scope="scope">
             {{ scope.row.quality }}  {{ scope.row.Unit }}
           </template>
         </el-table-column>
         <el-table-column
           label="总价"
           show-overflow-tooltip>
-          <template scope="scope">
+          <template slot-scope="scope">
             {{ scope.row.price*scope.row.quality }}
           </template>
         </el-table-column>
         <el-table-column
           label="订单状态"
           show-overflow-tooltip>
-          <template scope="scope">
+          <template slot-scope="scope">
             <strong v-if="scope.row.orderState===0" class="color-normal">
               待发货
             </strong>
@@ -100,7 +100,7 @@
         <el-table-column
           label="操作"
           width="180">
-          <template scope="scope">
+          <template slot-scope="scope">
             <el-button
               size="small"
               type="primary"

@@ -77,7 +77,7 @@
         <el-table-column
           label="物料名称"
           width="300">
-          <template scope="scope">
+          <template slot-scope="scope">
             <div class="name">
               <img :src="scope.row.imgUrls.length !==0?(imgPort+scope.row.imgUrls[0]):'/static/img/03.jpg'" alt="">
               <div class="title">
@@ -94,7 +94,7 @@
         <el-table-column
           label="采购数量"
           show-overflow-tooltip>
-          <template scope="scope">
+          <template slot-scope="scope">
             {{ scope.row.quality }}{{ scope.row.Unit }}
           </template>
         </el-table-column>
@@ -106,7 +106,7 @@
         <el-table-column
           label="发布时间"
           show-overflow-tooltip>
-          <template scope="scope">
+          <template slot-scope="scope">
             {{ scope.row.issueDate.substring(0,10) }}
           </template>
         </el-table-column>
@@ -119,7 +119,7 @@
         <el-table-column
           label="操作"
           width="140">
-          <template scope="scope">
+          <template slot-scope="scope">
             <div class="mar"></div>
             <el-badge :value="scope.row.quotationNum">
               <el-button
@@ -141,7 +141,7 @@
           <el-table-column property="price" label="所报单价" width="150"></el-table-column>
           <el-table-column property="remark" label="备注"></el-table-column>
           <el-table-column label="操作">
-            <template scope="scope">
+            <template slot-scope="scope">
               <el-button
                 size="small"
                 type="primary"

@@ -29,7 +29,10 @@
           },
           //供应商分类  ===》 数据是否加载完成
           aa: false,
-          act: false
+          act: false,
+          label: typeof (this.message) === 'boolean' ?
+                    ' ':
+                    this.message
         }
     },
     props:[
@@ -60,13 +63,6 @@
       },
       active(){
         return this.act?'active':''
-      },
-      label(){
-        if(typeof (this.message)==='boolean'){
-          return '';
-        }else {
-          return this.message;
-        }
       }
     },
     methods: {

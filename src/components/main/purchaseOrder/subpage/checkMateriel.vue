@@ -24,7 +24,7 @@
         <el-table-column
           label="物料名称"
           width="300">
-          <template scope="scope">
+          <template slot-scope="scope">
             <div class="name">
               <img :src="scope.row.imgUrls.length !==0?(imgPort+scope.row.imgUrls[0]):'/static/img/03.jpg'" alt="">
               <div class="title">
@@ -41,7 +41,7 @@
         <el-table-column
           label="需求量"
           show-overflow-tooltip>
-          <template scope="scope">
+          <template slot-scope="scope">
             {{ scope.row.quality }}  {{ scope.row.Unit }}
           </template>
         </el-table-column>
