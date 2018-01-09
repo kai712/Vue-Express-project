@@ -9,7 +9,7 @@
             <el-option label="待收货" :value='1'></el-option>
             <el-option label="已收货" :value='2'></el-option>
           </el-select>
-          <el-button slot="append" icon="search" @click="handleSearchClick"></el-button>
+          <el-button slot="append" icon="el-icon-search" @click="handleSearchClick">搜索</el-button>
         </el-input>
       </div>
       <strong class="seniorSearch">

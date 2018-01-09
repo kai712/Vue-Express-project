@@ -149,13 +149,13 @@
       //渲染分类节点
       renderContent(h, { node, data, store }) {
         return (
-          <span>
+          <span style="flex: 1; display: flex; align-items: center; justify-content: space-between; font-size: 12px; padding-right: 8px;">
             <span>
               <span>{node.label}</span>
             </span>
-            <span style="float: right; margin-right: 20px">
-              <el-button size="small" on-click={ () => this.append(store, data) }>新增子分类</el-button>
-              <el-button size="small" on-click={ () => this.remove(store, data) }>删除</el-button>
+            <span>
+              <el-button style="font-size: 12px;" type="text" on-click={ () => this.append(store, data) }>新增子分类</el-button>
+              <el-button style="font-size: 12px;" type="text" on-click={ () => this.remove(store, data) }>删除</el-button>
             </span>
           </span>);
       }

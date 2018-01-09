@@ -1,17 +1,19 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import CMain from '@/components/main/home'
-import MaterialClassification from '@/components/main/MaterialClassification'
-import MaterielList from '@/components/main/materielList'
-import OrderList from '@/components/main/orderList'
-import PurchaseOrder from '@/components/main/purchaseOrder'
-import SupplierClassification from '@/components/main/supplierClassification'
-import SupplierList from '@/components/main/supplierList'
-import TenderList from '@/components/main/tenderList'
-import Register from '@/components/register'
-import Login from '@/components/login'
-import Main from '@/components/main'
-import Miss from '@/components/404'
+
+
+const CMain = resolve => require(['../components/main/home'], resolve);
+const MaterialClassification = resolve => require(['../components/main/MaterialClassification'], resolve);
+const MaterielList = resolve => require(['../components/main/materielList'], resolve);
+const OrderList = resolve => require(['../components/main/orderList'], resolve);
+const PurchaseOrder = resolve => require(['../components/main/purchaseOrder'], resolve);
+const SupplierClassification = resolve => require(['../components/main/supplierClassification'], resolve);
+const SupplierList = resolve => require(['../components/main/supplierList'], resolve);
+const TenderList = resolve => require(['../components/main/tenderList'], resolve);
+const Register = resolve => require(['../components/register'], resolve);
+const Login = resolve => require(['../components/login'], resolve);
+const Main = resolve => require(['../components/main'], resolve);
+const Miss = resolve => require(['../components/404'], resolve);
 
 Vue.use(Router)
 

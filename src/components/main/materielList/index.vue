@@ -8,7 +8,7 @@
             <el-option label="禁用" :value='false'></el-option>
             <el-option label="启用" :value='true'></el-option>
           </el-select>
-          <el-button slot="append" icon="search" @click="handleSearchClick"></el-button>
+          <el-button slot="append" icon="el-icon-search" @click="handleSearchClick">搜索</el-button>
         </el-input>
       </div>
       <strong class="seniorSearch">
@@ -60,7 +60,7 @@
             <el-input v-model="addForm.Unit"></el-input>
           </el-form-item>
           <el-form-item label="状态">
-            <el-switch on-text="启用" off-text="禁用" v-model="addForm.state"></el-switch>
+            <el-switch v-model="addForm.state" active-color="#5393ff" inactive-color="#d8dbe3"></el-switch>
           </el-form-item>
           <el-form-item label="产品图片">
             <el-upload
@@ -71,7 +71,7 @@
               :file-list="fileList">
               <i class="el-icon-plus"></i>
             </el-upload>
-            <el-dialog v-model="dialogVisible" size="tiny">
+            <el-dialog v-model="dialogVisible">
               <img width="100%" :src="dialogImageUrl" alt="">
             </el-dialog>
           </el-form-item>
@@ -134,7 +134,7 @@
           prop="remark"
           label="用途与备注"
           show-overflow-tooltip
-          min-width="240">
+          min-width="180">
         </el-table-column>
         <el-table-column
           prop="state"
@@ -142,15 +142,15 @@
           <template slot-scope="scope">
             <el-switch
               v-model="scope.row.state"
-              on-text=""
-              off-text=""
-              @change="changeState(scope.row)">
+              @change="changeState(scope.row)"
+              active-color="#5393ff"
+              inactive-color="#d8dbe3">
             </el-switch>
           </template>
         </el-table-column>
         <el-table-column
           label="操作"
-          width="140">
+          width="160">
           <template slot-scope="scope">
             <el-button
               size="small"
@@ -188,7 +188,6 @@
 </template>
 
 <script>
-  import ClassifyTree from '../../common/classifyTree'
   import { post } from '../../../api'
   import { getMaterielClassify, getMateriel } from '../../../api/materiel'
   import { imgPort } from '../../../../static/script/port'
@@ -196,7 +195,7 @@
   export default {
     name: 'materielList',
     components: {
-      ClassifyTree
+      'ClassifyTree': () => import('../../common/classifyTree')
     },
     data () {
       return {

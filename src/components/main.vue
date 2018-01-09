@@ -16,7 +16,8 @@
       <div class="slideBarList">
         <el-menu router
                  unique-opened
-                 theme="dark"
+                 background-color='#324157'
+                 text-color='#ffffff'
                  :default-active="checkingRoute"
                  @select="handleSelectMenu"
                  class="el-menu-vertical-demo">
@@ -40,7 +41,7 @@
     <div class="container">
       <div class="header">
         <div class="user item">
-          <el-dropdown menu-align="end" @command="logOff">
+          <el-dropdown @command="logOff">
             <span class="el-dropdown-link">
               <icon name="user" scale="1.5" class="icon"></icon>
               <span style="display: inline-block">{{ username }}</span>
@@ -118,7 +119,7 @@
   import { pLogOff, isLogin, reviseUserInf } from '../api/user'
   import { mapGetters, mapMutations, mapActions } from 'vuex'
   export default {
-    name: 'main',
+    name: 'ccmain',
     components: {
       Icon
     },

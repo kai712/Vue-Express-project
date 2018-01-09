@@ -8,7 +8,7 @@
             <el-option label="禁用" :value='false'></el-option>
             <el-option label="启用" :value='true'></el-option>
           </el-select>
-          <el-button slot="append" icon="search" @click="handleSearchClick"></el-button>
+          <el-button slot="append" icon="el-icon-search" @click="handleSearchClick">搜索</el-button>
         </el-input>
       </div>
       <strong class="seniorSearch">
@@ -100,7 +100,7 @@
           </el-form-item>
 
           <el-form-item label="状态">
-            <el-switch on-text="" off-text="" v-model="addForm.state"></el-switch>
+            <el-switch v-model="addForm.state" active-color="#5393ff" inactive-color="#d8dbe3"></el-switch>
           </el-form-item>
           <el-form-item label="企业简介">
             <el-input type="textarea" v-model="addForm.orgRemark" :rows= 3></el-input>
@@ -131,7 +131,7 @@
         <el-table-column
           prop="orgName"
           label="供应商名称"
-          width="200">
+          width="180">
         </el-table-column>
         <el-table-column
           prop="label"
@@ -159,15 +159,15 @@
           <template slot-scope="scope">
             <el-switch
               v-model="scope.row.state"
-              on-text=""
-              off-text=""
+              active-color="#5393ff"
+              inactive-color="#d8dbe3"
               @change="changeState(scope.row)">
             </el-switch>
           </template>
         </el-table-column>
         <el-table-column
           label="操作"
-          width="140">
+          width="160">
           <template slot-scope="scope">
             <el-button
               size="small"
@@ -205,7 +205,6 @@
 </template>
 
 <script>
-  import ClassifyTree from '../../common/classifyTree'
   import { cityData } from '../../../../static/script/citys';
   import { email, mobile } from '../../../../static/script/rules';
   import { getSupplier, getSupplierClassify } from '../../../api/supplier'
@@ -214,7 +213,7 @@
   export default {
     name: 'supplierList',
     components: {
-      ClassifyTree
+      'ClassifyTree': () => import('../../common/classifyTree')
     },
     data () {
       return {

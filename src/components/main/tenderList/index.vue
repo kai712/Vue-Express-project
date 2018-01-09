@@ -4,7 +4,7 @@
       <div class="search">
         <el-input placeholder="请输入招标标题" size="small"
                   v-model="form.Title" class="searchInput">
-          <el-button slot="append" icon="search" @click="handleSearchClick"></el-button>
+          <el-button slot="append" icon="el-icon-search" @click="handleSearchClick">搜索</el-button>
         </el-input>
       </div>
       <strong class="seniorSearch">
@@ -58,7 +58,7 @@
               :on-remove="removeUpload">
               <i class="el-icon-plus"></i>
             </el-upload>
-            <el-dialog v-model="dialogVisible" size="tiny">
+            <el-dialog v-model="dialogVisible">
               <img width="100%" :src="dialogImageUrl" alt="">
             </el-dialog>
           </el-form-item>

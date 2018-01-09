@@ -17,15 +17,13 @@
 </template>
 
 <script>
-  import EChartLine from './subpage/com-echart-line'
-  import EChartBar from './subpage/com-echart-bar'
   import { mapGetters } from 'vuex'
 
   export default {
     name: 'cMain',
     components: {
-      EChartLine,
-      EChartBar
+      'EChartLine': () => import('./subpage/com-echart-line'),
+      'EChartBar': () => import('./subpage/com-echart-bar'),
     },
     computed: {
       ...mapGetters([

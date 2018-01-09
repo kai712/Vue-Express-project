@@ -4,7 +4,7 @@
       <div class="search">
         <el-input placeholder="请输入物料名称" size="small"
                   v-model="form.Title" class="searchInput">
-          <el-button slot="append" icon="search" @click="handleSearchClick"></el-button>
+          <el-button slot="append" icon="el-icon-search" @click="handleSearchClick">搜索</el-button>
         </el-input>
       </div>
       <strong class="seniorSearch">
@@ -33,7 +33,7 @@
       </div>
       <el-dialog title="新建采购单" :visible.sync="dialogAddMaterielVisible" class="add-materiel" @close="handleAddFormClose">
         <div class="addDialogHeader">
-          <el-steps center
+          <el-steps  align-center
                     :active="addStep"
                     align-center>
             <el-step title="选择物料"></el-step>
@@ -114,7 +114,7 @@
           prop="remark"
           label="备注"
           show-overflow-tooltip
-          min-width="240">
+          min-width="200">
         </el-table-column>
         <el-table-column
           label="操作"
@@ -176,15 +176,13 @@
   import { post } from '../../../api/index'
   import { getPurchaseOrder } from '../../../api/purchaseOrder'
   import { imgPort } from '../../../../static/script/port'
-  import CheckMateriel from './subpage/checkMateriel'
-  import CheckSupplier from './subpage/checkSupplier'
   import { mobile } from '../../../../static/script/rules'
   import { mapGetters, mapMutations } from 'vuex'
   export default {
     name: 'purchaseList',
     components: {
-      CheckMateriel,
-      CheckSupplier
+      'CheckMateriel': () => import('./subpage/checkMateriel'),
+      'CheckSupplier': () => import('./subpage/checkSupplier')
     },
     data () {
       return {
